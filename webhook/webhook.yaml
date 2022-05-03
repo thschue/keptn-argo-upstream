@@ -6,6 +6,16 @@ spec:
   webhooks:
     - type: sh.keptn.event.deliver.triggered
       requests:
-        - curl --request POST https://asdf1234
+        - "curl -k --header 'Authorization: Bearer {{.env.secret_argo_token}}'
+          --request POST --data
+          '{\"infos\":[{\"name\":\"triggeredid\",\"value\":\"{{.id}}\"},{\"name\":\
+          \"shkeptncontext\",\"value\":\"{{.shkeptncontext}}\"}],\"prune\":true}'
+          https://34.71.113.40/api/v1/applications/{{.data.labels.servicename}}\
+          /sync"
+      envFrom:
+        - name: secret_argo_token
+          secretRef:
+            name: argo
+            key: token
       subscriptionID: f5e47ed7-ce07-45ed-a6cd-ef5afb60f5f8
       sendFinished: true
