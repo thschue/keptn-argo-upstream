@@ -18,4 +18,4 @@ spec:
             name: argo
             key: token
       subscriptionID: f5e47ed7-ce07-45ed-a6cd-ef5afb60f5f8
-      sendFinished: true
+      sendFinished: false
