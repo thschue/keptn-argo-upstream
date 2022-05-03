@@ -6,16 +6,9 @@ spec:
   stages:
     - name: "dev"
       sequences:
-        - name: "kickoff"
-          tasks:
-            - name: approval
-              properties: 
-                pass: manual
-                warning: manual 
         - name: "artifact-delivery"
-          triggeredOn:
-            - event: "dev.kickoff.finished"
           tasks:
+            - name: "kickoff"
             - name: "deliver"
             - name: "test"
             - name: "evaluate"
@@ -24,6 +17,7 @@ spec:
       sequences:
         - name: "artifact-delivery"
           tasks:
+            - name: "kickoff"
             - name: "deliver"
             - name: "test"
             - name: "evaluate"
@@ -32,6 +26,7 @@ spec:
       sequences:
         - name: "artifact-delivery"
           tasks:
+            - name: "kickoff"
             - name: "deliver"
             - name: "test"
             - name: "evaluate"
