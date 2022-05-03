@@ -10,24 +10,24 @@ spec:
           tasks:
             - name: "kickoff"
             - name: "deliver"
-            - name: "test"
-            - name: "evaluate"
-            - name: "promote"
+#            - name: "test"
+#            - name: "evaluate"
+#            - name: "promote"
     - name: "hardening"
       sequences:
         - name: "artifact-delivery"
           tasks:
             - name: "kickoff"
             - name: "deliver"
-            - name: "test"
-            - name: "evaluate"
-            - name: "promote"
+#            - name: "test"
+#            - name: "evaluate"
+#            - name: "promote"
     - name: "production"
       sequences:
         - name: "artifact-delivery"
           tasks:
             - name: "kickoff"
             - name: "deliver"
-            - name: "test"
-            - name: "evaluate"
-            - name: "promote"
+#            - name: "test"
+#            - name: "evaluate"
+#            - name: "promote"
