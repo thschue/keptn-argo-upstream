@@ -9,6 +9,11 @@ spec:
         - name: "artifact-delivery"
           tasks:
             - name: "deliver"
+            - name: "git-promotion"
+              properties:
+                repository: "https://github.com/jkleinlercher/keptn-argo-dev"
+                secretname: "keptncademo"
+                strategy: "branches"            
 #            - name: "test"
 #            - name: "evaluate"
 #            - name: "promote"
@@ -18,6 +23,11 @@ spec:
           tasks:
             - name: "kickoff"
             - name: "deliver"
+            - name: "git-promotion"
+              properties:
+                repository: "https://github.com/jkleinlercher/keptn-argo-dev"
+                secretname: "keptncademo"
+                strategy: "branches"            
 #            - name: "test"
 #            - name: "evaluate"
 #            - name: "promote"
