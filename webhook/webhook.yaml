@@ -6,13 +6,17 @@ spec:
   webhooks:
     - type: sh.keptn.event.deliver.triggered
       requests:
-        - >-
-          curl -k --header 'Authorization: Bearer {{.env.secret_argo_token}}' --request POST --data '{"infos":[{"name":"triggeredid","value":"{{.id}}"},{"name":"shkeptncontext","value":"{{.shkeptncontext}}"}],"prune":true}' https://34.71.113.40/api/v1/applications/{{.data.labels.servicename}}/sync
+        - "curl --header 'Authorization: Bearer {{.env.secret_argokeptn_token}}'
+          --request POST --data
+          '{\"infos\":[{\"name\":\"triggeredid\",\"value\":\"{{.id}}\"},{\"name\
+          \":\"shkeptncontext\",\"value\":\"{{.shkeptncontext}}\"}],\"prune\":t\
+          rue}'
+          https://argo.research.dev.dynatracelabs.com/api/v1/applications/{{.da\
+          ta.labels.appname}}/sync"
       envFrom:
-        - name: secret_argo_token
+        - name: secret_argokeptn_token
           secretRef:
-            name: argo
+            name: argo-keptn
             key: token
-      subscriptionID: d9cee42b-e257-4ab2-88d8-2579cffa43e9
+      subscriptionID: f5e47ed7-ce07-45ed-a6cd-ef5afb60f5f8
       sendFinished: false
-      sendStarted: true
