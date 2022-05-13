@@ -13,12 +13,6 @@ spec:
           secretRef:
             name: argo
             key: token
-      subscriptionID: f5e47ed7-ce07-45ed-a6cd-ef5afb60f5f8
-      sendFinished: false
-    - type: sh.keptn.event.deliver.triggered
-      requests:
-        - >-
-          curl --request POST https://12345asdöflkj
       subscriptionID: d9cee42b-e257-4ab2-88d8-2579cffa43e9
-      sendFinished: true
+      sendFinished: false
       sendStarted: true
