@@ -6,37 +6,33 @@ spec:
   stages:
     - name: "dev"
       sequences:
+        - name: "kickoff"
+          tasks:
+            - name: approval
+              properties: 
+                pass: manual
+                warning: manual 
         - name: "artifact-delivery"
+          triggeredOn:
+            - event: "dev.kickoff.finished"
           tasks:
             - name: "deliver"
-            - name: "git-promotion"
-              properties:
-                repository: "https://github.com/jkleinlercher/keptn-argo-dev"
-                secretname: "keptncademo"
-                strategy: "branches"            
-#            - name: "test"
-#            - name: "evaluate"
-#            - name: "promote"
+            - name: "test"
+            - name: "evaluate"
+            - name: "promote"
     - name: "hardening"
       sequences:
         - name: "artifact-delivery"
           tasks:
-            - name: "kickoff"
             - name: "deliver"
-            - name: "git-promotion"
-              properties:
-                repository: "https://github.com/jkleinlercher/keptn-argo-dev"
-                secretname: "keptncademo"
-                strategy: "branches"            
-#            - name: "test"
-#            - name: "evaluate"
-#            - name: "promote"
+            - name: "test"
+            - name: "evaluate"
+            - name: "promote"
     - name: "production"
       sequences:
         - name: "artifact-delivery"
           tasks:
-            - name: "kickoff"
             - name: "deliver"
-#            - name: "test"
-#            - name: "evaluate"
-#            - name: "promote"
+            - name: "test"
+            - name: "evaluate"
+            - name: "promote"
