@@ -18,7 +18,7 @@ spec:
           tasks:
             - name: "deliver"
             - name: "test"
-            - name: "evaluate"
+            - name: "evaluation"
             - name: "promote"
     - name: "hardening"
       sequences:
@@ -26,7 +26,7 @@ spec:
           tasks:
             - name: "deliver"
             - name: "test"
-            - name: "evaluate"
+            - name: "evaluation"
             - name: "promote"
     - name: "production"
       sequences:
@@ -34,5 +34,5 @@ spec:
           tasks:
             - name: "deliver"
             - name: "test"
-            - name: "evaluate"
+            - name: "evaluation"
             - name: "promote"
