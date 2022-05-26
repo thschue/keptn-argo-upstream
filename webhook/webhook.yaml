@@ -29,3 +29,10 @@ spec:
       subscriptionID: e0d5a049-8c7f-47c9-986f-c635abdda893
       sendFinished: true
       sendStarted: true
+    - type: sh.keptn.event.deliver-infra.triggered
+      requests:
+        - >-
+          curl --request POST https://eook6pd5dkebdn4.m.pipedream.net
+      subscriptionID: 139762f8-e214-4539-a32a-a66847a28f36
+      sendFinished: true
+      sendStarted: true
