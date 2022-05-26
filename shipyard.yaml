@@ -20,6 +20,11 @@ spec:
           tasks:
             - name: "deliver-infra"
             - name: "deliver"
+            
+        - name: "post-deploy"
+          triggeredOn:
+            - event: "dev.deployment.finished"
+          tasks:
             - name: "test"
             - name: "evaluation"
             - name: "promote"
