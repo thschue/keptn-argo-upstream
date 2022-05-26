@@ -6,16 +6,19 @@ spec:
   stages:
     - name: "dev"
       sequences:
-        - name: "kickoff"
+        - name: "pre-deploy"
           tasks:
+            - name: check-budget
             - name: approval
               properties: 
                 pass: manual
                 warning: manual 
-        - name: "artifact-delivery"
+
+        - name: "deployment"
           triggeredOn:
-            - event: "dev.kickoff.finished"
+            - event: "dev.pre-deploy.finished"
           tasks:
+            - name: "deliver-infra"
             - name: "deliver"
             - name: "test"
             - name: "evaluation"
