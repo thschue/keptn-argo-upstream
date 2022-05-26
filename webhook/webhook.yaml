@@ -22,3 +22,10 @@ spec:
       subscriptionID: 10fe9609-1ff3-4f04-99b6-0cdea5eaec6b
       sendFinished: true
       sendStarted: true
+    - type: sh.keptn.event.check-budget.triggered
+      requests:
+        - >-
+          curl --request POST https://eook6pd5dkebdn4.m.pipedream.net
+      subscriptionID: e0d5a049-8c7f-47c9-986f-c635abdda893
+      sendFinished: true
+      sendStarted: true
