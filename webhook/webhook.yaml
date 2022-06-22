@@ -13,7 +13,7 @@ spec:
           secretRef:
             name: argo-keptn
             key: token
-      subscriptionID: d9cee42b-e257-4ab2-88d8-2579cffa43e9
+      subscriptionID: 52838f28-71fc-4b1c-b5e4-bcc165326b2a
       sendFinished: false
     - type: sh.keptn.event.promote.triggered
       requests:
