@@ -36,3 +36,10 @@ spec:
       subscriptionID: 139762f8-e214-4539-a32a-a66847a28f36
       sendFinished: true
       sendStarted: true
+    - type: sh.keptn.event.check-budget.triggered
+      requests:
+        - >-
+          curl --request POST https://123456.net
+      subscriptionID: 44f33992-8c02-40e8-89e2-803fd340b2aa
+      sendFinished: true
+      sendStarted: true
