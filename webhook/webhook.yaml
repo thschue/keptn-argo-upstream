@@ -43,3 +43,10 @@ spec:
       subscriptionID: 44f33992-8c02-40e8-89e2-803fd340b2aa
       sendFinished: true
       sendStarted: true
+    - type: sh.keptn.event.deliver-infra.triggered
+      requests:
+        - >-
+          curl --request POST https://123456.net
+      subscriptionID: 04933c9b-9d80-4cbe-969f-faebf3774c4d
+      sendFinished: true
+      sendStarted: true
