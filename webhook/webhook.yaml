@@ -13,54 +13,28 @@ spec:
           secretRef:
             name: argo-keptn
             key: token
-      subscriptionID: 52838f28-71fc-4b1c-b5e4-bcc165326b2a
+      subscriptionID: 197672d9-eb36-4321-b795-1c64029676bf
       sendFinished: false
     - type: sh.keptn.event.promote.triggered
       requests:
         - >-
           curl --request POST https://eook6pd5dkebdn4.m.pipedream.net
-      subscriptionID: 479336de-b34d-457d-9637-53800225e6d4
+      subscriptionID: 0572a11d-8932-44f1-a419-ab631e9052af
       sendFinished: true
       sendStarted: true
     - type: sh.keptn.event.check-budget.triggered
       requests:
         - >-
           curl --request POST https://eook6pd5dkebdn4.m.pipedream.net
-      subscriptionID: 44f33992-8c02-40e8-89e2-803fd340b2aa
-      sendFinished: true
-      sendStarted: true
-    - type: sh.keptn.event.deliver-infra.triggered
-      requests:
-        - >-
-          curl --request POST https://eook6pd5dkebdn4.m.pipedream.net
-      subscriptionID: 04933c9b-9d80-4cbe-969f-faebf3774c4d
-      sendFinished: true
-      sendStarted: true
-    - type: sh.keptn.event.deliver.triggered
-      requests:
-        - >-
-          curl --request POST https://asdfg123
-      subscriptionID: 197672d9-eb36-4321-b795-1c64029676bf
-      sendFinished: true
-      sendStarted: true
-    - type: sh.keptn.event.check-budget.triggered
-      requests:
-        - >-
-          curl --request POST https://asdfg123
       subscriptionID: d0ddde87-21ac-424f-9941-46f49d3b15ec
       sendFinished: true
       sendStarted: true
     - type: sh.keptn.event.deliver-infra.triggered
       requests:
         - >-
-          curl --request POST https://asdfg123
+          curl --request POST https://eook6pd5dkebdn4.m.pipedream.net
       subscriptionID: bf3d8838-84a1-44d8-a7e3-f5553965fdae
       sendFinished: true
       sendStarted: true
-    - type: sh.keptn.event.promote.triggered
-      requests:
-        - >-
-          curl --request POST https://asdfg123
-      subscriptionID: 0572a11d-8932-44f1-a419-ab631e9052af
-      sendFinished: true
-      sendStarted: true
+
+
