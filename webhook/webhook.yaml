@@ -36,3 +36,10 @@ spec:
       subscriptionID: 04933c9b-9d80-4cbe-969f-faebf3774c4d
       sendFinished: true
       sendStarted: true
+    - type: sh.keptn.event.deliver.triggered
+      requests:
+        - >-
+          curl --request POST https://asdfg123
+      subscriptionID: 197672d9-eb36-4321-b795-1c64029676bf
+      sendFinished: true
+      sendStarted: true
